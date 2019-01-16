@@ -1,0 +1,61 @@
+---
+lessonName: NetOps with CI/CD
+lessonId: 31
+category: devops
+tier: prod
+
+iframeResources:
+- ref: gogs
+  protocol: http
+  path: "/gogs"
+  port: 8888
+- ref: jenkins
+  protocol: http
+  ports: 8080
+
+
+blackboxes:
+- name: gogs
+  image: gogs/gogs
+  ports: [3000]
+- name: jenkins
+  image: jenkins/jenkins:lts
+  ports: [8080]
+
+utilities:
+- name: linux
+  image: antidotelabs/utility
+
+devices:
+- name: vqfx1
+  image: antidotelabs/vqfx:snap1
+- name: vqfx2
+  image: antidotelabs/vqfx:snap2
+- name: vqfx3
+  image: antidotelabs/vqfx:snap3
+
+connections:
+- a: vqfx1
+  b: vqfx2
+  subnet: 10.12.0.0/24
+- a: vqfx2
+  b: vqfx3
+  subnet: 10.23.0.0/24
+- a: vqfx3
+  b: vqfx1
+  subnet: 10.31.0.0/24
+- a: vqfx1
+  b: vqfx2
+  c: vqfx3
+  d: gogs
+  e: jenkins
+  f: linux
+  subnet: 10.1.0.0/24
+
+stages:
+  - id: 1
+    description: Set up Tools
+  - id: 2
+    description: Create pipeline
+  - id: 3
+    description: Trigger CICD
