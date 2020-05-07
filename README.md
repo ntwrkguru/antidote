@@ -1,11 +1,7 @@
-# Antidote
+# The NRE Labs Curriculum
 
-[![Build Status](https://travis-ci.org/nre-learning/antidote.svg?branch=master)](https://travis-ci.org/nre-learning/antidote)
+[![Build Status](https://travis-ci.org/nre-learning/nrelabs-curriculum.svg?branch=master)](https://travis-ci.org/nre-learning/nrelabs-curriculum)
 
-Antidote is a project for making learning automation easier, by providing a fully in-browser learning experience, highly extensible lesson model, all back-ended by real, non simulated endpoints like network devices and servers.
+This repository houses the curriculum for [NRE Labs](https://nrelabs.io), a site for teaching next-generation network engineering skills in the browser powered by on-demand, interactive virtual environments, and compelling real-world scenarios.
 
-The [Antidote documentation](https://antidoteproject.readthedocs.io/en/latest/) is your one-stop shop for details about Antidote. However, it's helpful to know at a high-level that Antidote isn't just one application, but a series of applications designed to work together to provide this learning experience. Here are a few other repositories you might be interested in:
-
-- [antidote-web](https://github.com/nre-learning/antidote-web) is the front-end application for Antidote.
-- [syringe](https://github.com/nre-learning/syringe) handles back-end orchestration, APIs, and communicating with Kubernetes.
-- [antidote-selfmedicate](https://github.com/nre-learning/antidote-selfmedicate) is where you want to go to spin up a local instance of Antidote on your laptop.
+If you are interested in contributing to this curriculum - great! We would love to have you. Head on over to the [contribution guide](https://docs.nrelabs.io/creating-contributing/getting-started) to get started.
